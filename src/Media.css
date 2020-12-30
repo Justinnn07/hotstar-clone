@@ -1,19 +1,14 @@
-.mediaCard > img {
-  width: 250px;
+.media > img {
+  width: 150px;
   border-radius: 5px;
 }
 
-.mediaCard {
+.media {
   margin: 10px;
   transition: transform 100ms;
   cursor: pointer;
 }
 
-.mediaCard > img:hover {
+.media > img:hover {
   transform: scale(1.09);
-}
-
-.icons {
-  display: flex;
-  color: white;
 }

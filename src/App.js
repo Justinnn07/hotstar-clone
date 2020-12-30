@@ -1,10 +1,42 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
+import { db } from "./firebase";
 import Header from "./Header";
+import Media from "./Media";
 import MediaCard from "./MediaCard";
 import Slides from "./Slides";
 
 const App = () => {
+  const [mediaCard, setMediaCard] = useState([]);
+  const [media, setMedia] = useState([]);
+  const [shows, setShows] = useState([]);
+  const [movies, setMovies] = useState([]);
+
+  useEffect(() => {
+    db.collection("movies").onSnapshot((snapshot) => {
+      setMovies(snapshot.docs.map((doc) => doc.data()));
+    });
+  });
+
+  useEffect(() => {
+    db.collection("shows").onSnapshot((snapshot) => {
+      setShows(snapshot.docs.map((doc) => doc.data()));
+    });
+  });
+
+  useEffect(() => {
+    db.collection("media-card").onSnapshot((snapshot) => {
+      setMedia(snapshot.docs.map((doc) => doc.data()));
+    });
+  });
+
+  console.log(media);
+
+  useEffect(() => {
+    db.collection("media").onSnapshot((snapshot) => {
+      setMediaCard(snapshot.docs.map((doc) => doc.data()));
+    });
+  }, []);
   return (
     <div className="app">
       <Header />
@@ -12,10 +44,33 @@ const App = () => {
       <div className="continuewatch">
         <span>Continue Watching</span>
         <div className="flex-continue">
-          <MediaCard img="https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/old_images/MOVIE/8522/1000118522/1000118522-h" />
-          <MediaCard img="https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_1x/sources/r1/cms/prod/old_images/MOVIE/308/1000040308/1000040308-h" />
-          <MediaCard img="https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/old_images/MOVIE/1352/1000081352/1000081352-h" />
-          <MediaCard img="https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/5452/245452-h" />
+          {mediaCard.map((media) => (
+            <MediaCard img={media.img} />
+          ))}
+        </div>
+      </div>
+      <div className="continuewatch">
+        <span>Specials & Latest Movies</span>
+        <div className="flex-continue">
+          {media.map((media) => (
+            <Media img={media.img} />
+          ))}
+        </div>
+      </div>
+      <div className="continuewatch">
+        <span>Shows Recommended For You</span>
+        <div className="flex-continue">
+          {shows.map((shows) => (
+            <Media img={shows.img} />
+          ))}
+        </div>
+      </div>
+      <div className="continuewatch">
+        <span>Movies Recommended For You</span>
+        <div className="flex-continue">
+          {movies.map((movies) => (
+            <Media img={movies.img} />
+          ))}
         </div>
       </div>
     </div>
