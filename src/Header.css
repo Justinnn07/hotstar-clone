@@ -1,0 +1,94 @@
+.header {
+  background-color: #121926;
+  padding: 20px 15px 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  position: sticky;
+  z-index: 100;
+}
+
+.header-left {
+  padding-bottom: 7px;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: none;
+  color: #192133;
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+}
+
+.header-left > span {
+  padding: 20px 15px 20px;
+  margin-top: 6px;
+  color: #ffffffcc;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: none;
+}
+
+.header-left > img {
+  margin-left: 20px;
+}
+
+.header-left > i {
+  color: whitesmoke;
+  margin-top: 6px;
+}
+
+.kids {
+  margin-top: 10px;
+  margin-right: 5px;
+}
+
+.header-left > span:hover {
+  transition: 0.5s;
+  color: aqua;
+}
+
+.header-right {
+  padding: 20px 15px 20px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn {
+  color: #fff;
+  font-size: 12px;
+  margin-left: 10px;
+  height: 24px;
+  background-color: #1f80e0;
+  font-weight: 800;
+  border-radius: 4px;
+  outline-width: #1f80e0;
+  border: none;
+  outline-width: 0;
+  cursor: pointer;
+}
+
+.header-right > i {
+  margin-left: -15px;
+  color: #5a6268;
+  font-size: small;
+}
+
+.log {
+  padding: 20px 15px 20px;
+  margin-top: 6px;
+  color: #ffffffcc;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: none;
+  cursor: pointer;
+}
+
+.log:hover {
+  transition: 0.5s;
+  color: aqua;
+}
