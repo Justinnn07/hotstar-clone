@@ -1,0 +1,39 @@
+.images > img {
+  padding: 0 10px 10px 10px;
+  margin-top: 10px;
+}
+
+.images {
+  max-width: 768px;
+}
+
+.text > span {
+  margin-top: 20px;
+  font-size: 24px;
+  text-shadow: 0 2px 4px rgb(0 0 0 / 20%);
+  margin: 2px 0;
+  color: #fff;
+  font-weight: 600;
+}
+
+.hot-spec {
+  color: rgba(255, 255, 255, 0.6);
+  text-shadow: 0 2px 4px rgb(0 0 0 / 20%);
+}
+
+.desc {
+  margin-top: 20px;
+  font-size: 14px;
+  text-shadow: 0 2px 4px rgb(0 0 0 / 20%);
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 700;
+}
+
+.slides {
+  display: flex;
+  background-color: #030b17;
+  border-radius: 17px;
+}
+.text {
+  padding: 60px;
+}

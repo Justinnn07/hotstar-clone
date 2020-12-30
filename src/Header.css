@@ -5,6 +5,8 @@
   padding-top: 10px;
   position: sticky;
   z-index: 100;
+  top: 0;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
 .header-left {
@@ -44,7 +46,7 @@
 }
 
 .header-left > span:hover {
-  transition: 0.5s;
+  transition: all 0.3s ease-in;
   color: aqua;
 }
 
