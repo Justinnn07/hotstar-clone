@@ -92,3 +92,7 @@
   transition: 0.5s;
   color: aqua;
 }
+
+.search > ::placeholder {
+  color: white !important;
+}
