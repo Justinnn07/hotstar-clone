@@ -3,6 +3,10 @@
   margin-top: 10px;
 }
 
+.images > img:hover {
+  opacity: 1;
+}
+
 .images {
   max-width: 768px;
 }

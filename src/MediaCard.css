@@ -1,0 +1,14 @@
+.mediaCard > img {
+  width: 250px;
+  border-radius: 5px;
+}
+
+.mediaCard {
+  margin: 10px;
+  transition: transform 100ms;
+  cursor: pointer;
+}
+
+.mediaCard > img:hover {
+  transform: scale(1.09);
+}
