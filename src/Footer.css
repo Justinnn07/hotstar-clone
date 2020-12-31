@@ -1,0 +1,60 @@
+.footer-right > span {
+  font-size: large;
+  font-weight: 400;
+  padding: 0 20px 0 0;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  margin-top: 20px;
+}
+.footer-right > span:hover {
+  color: #1f80e0;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.footer-left > span {
+  color: #919191;
+  font-size: 14px;
+  padding-bottom: 7px;
+  font-weight: 500;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #030b17;
+  padding: 30px;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer-left > span {
+  margin-top: 20px;
+}
+
+.active {
+  font-size: xx-large;
+  color: lightcoral;
+}
+
+.icons1 {
+  display: flex;
+  align-items: center;
+}
+
+.icons1 > a {
+  text-decoration: none;
+}
+
+.whatsapp {
+  color: lightgreen;
+  font-size: xx-large;
+  margin-left: 10px;
+}

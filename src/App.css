@@ -15,6 +15,7 @@ body {
 .continuewatch > span:hover {
   color: #1f80e0;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .flex-continue {

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import { db } from "./firebase";
+import Footer from "./Footer";
 import Header from "./Header";
 import Media from "./Media";
 import MediaCard from "./MediaCard";
@@ -73,6 +74,7 @@ const App = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
