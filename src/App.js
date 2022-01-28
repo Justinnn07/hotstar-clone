@@ -17,27 +17,17 @@ const App = () => {
     db.collection("movies").onSnapshot((snapshot) => {
       setMovies(snapshot.docs.map((doc) => doc.data()));
     });
-  });
-
-  useEffect(() => {
-    db.collection("shows").onSnapshot((snapshot) => {
+     db.collection("shows").onSnapshot((snapshot) => {
       setShows(snapshot.docs.map((doc) => doc.data()));
     });
-  });
-
-  useEffect(() => {
-    db.collection("media-card").onSnapshot((snapshot) => {
+     db.collection("media-card").onSnapshot((snapshot) => {
       setMedia(snapshot.docs.map((doc) => doc.data()));
     });
-  });
-
-  console.log(media);
-
-  useEffect(() => {
     db.collection("media").onSnapshot((snapshot) => {
       setMediaCard(snapshot.docs.map((doc) => doc.data()));
     });
   }, []);
+
   return (
     <div className="app">
       <Header />
